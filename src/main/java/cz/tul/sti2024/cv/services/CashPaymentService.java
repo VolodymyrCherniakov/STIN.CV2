@@ -17,10 +17,7 @@ public class CashPaymentService implements IPaymentService {
 
     @Override
     public void processPayment(Payment payment) {
-        try {
-            paymentServiceProcessing.pay(paymentTransformations.transformXMLFromPayment(payment));
-        } catch (JsonProcessingException jsonProcessingException) {
-            //handle here
-        }
+        String toPay = payment.getAmount() + "/" + payment.getCurrency();
+        paymentServiceProcessing.pay(toPay);
     }
 }
