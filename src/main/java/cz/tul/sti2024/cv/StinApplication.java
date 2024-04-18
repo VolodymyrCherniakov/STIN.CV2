@@ -8,5 +8,4 @@ public class StinApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StinApplication.class, args);
 	}
-
 }
